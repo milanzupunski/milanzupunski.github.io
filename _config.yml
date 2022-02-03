@@ -1,3 +1,7 @@
-name: Milan Zupunski
+author :
+  name : Milan Zupunski
+  email : milan.zupunski@hhu.de
+  github : milanzupunski
+  twitter : milanzupunski
 markdown: milanzupunski
 permalink: /blog/:year/:month/:day/:title
