@@ -1,4 +1,3 @@
 name: Milan Zupunski
-	markdown: milanzupunski
-	
+markdown: milanzupunski
 permalink: /blog/:year/:month/:day/:title
