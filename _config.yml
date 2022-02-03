@@ -1,2 +1,4 @@
 name: Milan Zupunski
 	markdown: milanzupunski
+	
+permalink: /blog/:year/:month/:day/:title
