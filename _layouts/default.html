@@ -1,34 +1,53 @@
 <!DOCTYPE html>
-	<html>
-		<head>
-			<title>{{ page.title }}</title>
-			<!-- link to main stylesheet -->
-			<link rel="stylesheet" type="text/css" href="/css/main.css">
-		</head>
-		<body>
-			<nav>
-	    		<ul>
-	        		<li><a href="/">Home</a></li>
-		        	<li><a href="/about">About</a></li>
-	        		<li><a href="/cv">CV</a></li>
-	        		<li><a href="/blog">Blog</a></li>
-	    		</ul>
-			</nav>
-			<div class="container">
-			
-			{{ content }}
-			
-			</div><!-- /.container -->
-			<footer>
-	    		<ul>
-	        		<li><a href="mailto:milan.zupunski@hhu.de">email</a></li>
-				<li><a href="https://twitter.com/MilanZupunski">twitter</a></li>
-				<li><a href="https://bsky.app/profile/milanzupunski.bsky.social">bluesky</a></li>
-				<li><a href="https://orcid.org/0000-0002-8576-1292">ORCID</a></li>
-				<li><a href="https://publons.com/researcher/U-1696-2017/">publons</a></li>
-	        		<li><a href="https://scholar.google.com/citations?user=oPjYyFwAAAAJ">Google Scholar</a></li>
-				<li><a href="https://www.linkedin.com/in/milan-%C5%BEupunski-296bbbaa">Linkedin</a></li>
-			</ul>
-			</footer>
-		</body>
-	</html>
+<html>
+    <head>
+        <title>{{ page.title }}</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="An ecophysiologist seeking to understand how plants respond to environmental cues.">
+        <meta name="robots" content="index, follow">
+
+        <!-- Canonical URL -->
+        <link rel="canonical" href="https://milanzupunski.github.io/">
+
+        <!-- Open Graph Tags (for social media previews) -->
+        <meta property="og:title" content="Milan Zupunski - Ecophysiologist">
+        <meta property="og:description" content="Researcher at the Institute of Cell and Interaction Biology, HHU, Düsseldorf, Germany.">
+        <meta property="og:image" content="https://milanzupunski.github.io/docs/assets/pic.jpg">
+        <meta property="og:url" content="https://milanzupunski.github.io/">
+        <meta property="og:type" content="website">
+
+        <!-- Twitter Card (for Twitter/X preview) -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Milan Zupunski - Ecophysiologist">
+        <meta name="twitter:description" content="Researcher at the Institute of Cell and Interaction Biology, HHU, Düsseldorf, Germany.">
+        <meta name="twitter:image" content="https://milanzupunski.github.io/docs/assets/pic.jpg">
+
+        <!-- Link to main stylesheet -->
+        <link rel="stylesheet" type="text/css" href="/css/main.css">
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/cv">CV</a></li>
+                <li><a href="/blog">Blog</a></li>
+            </ul>
+        </nav>
+        <div class="container">
+            {{ content }}
+        </div><!-- /.container -->
+        <footer>
+            <ul>
+                <li><a href="mailto:milan.zupunski@hhu.de">email</a></li>
+                <li><a href="https://twitter.com/MilanZupunski">twitter</a></li>
+                <li><a href="https://bsky.app/profile/milanzupunski.bsky.social">bluesky</a></li>
+                <li><a href="https://orcid.org/0000-0002-8576-1292">ORCID</a></li>
+                <li><a href="https://publons.com/researcher/U-1696-2017/">publons</a></li>
+                <li><a href="https://scholar.google.com/citations?user=oPjYyFwAAAAJ">Google Scholar</a></li>
+                <li><a href="https://www.linkedin.com/in/milan-%C5%BEupunski-296bbbaa">Linkedin</a></li>
+            </ul>
+        </footer>
+    </body>
+</html>
