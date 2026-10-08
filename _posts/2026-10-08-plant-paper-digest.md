@@ -146,3 +146,7 @@ These are the settings I found myself adjusting:
 This is a keyword filter. It will not understand that a paper about GLR channels is relevant to you if the abstract never uses any of your terms, so it is worth spending ten minutes on synonyms and gene names. bioRxiv's server also returns errors now and then. The script retries, and Europe PMC indexes bioRxiv preprints a few days later anyway, so a missed day usually turns up the following week.
 
 If you set it up for your own field and find a useful tweak, I would be glad to hear about it.
+
+## Credit
+
+I should be clear about who did what. The idea and the testing were mine. The code and the first draft of this post were written by [Claude](https://claude.ai), the AI assistant made by [Anthropic](https://www.anthropic.com), over a single conversation in which I described what I needed, ran it on my own computer and reported back what looked wrong.
