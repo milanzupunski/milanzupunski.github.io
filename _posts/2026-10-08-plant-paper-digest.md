@@ -32,7 +32,7 @@ On my first 30-day test run, the three sources returned about 18,000 unique reco
 
 ![The calcium and ROS section of my first digest](/docs/assets/plant-paper-digest-screenshot.png)
 
-On the page you can tick papers, filter by any word, hide preprints or reviews, copy the ticked papers as references, or download them as a RIS file and drag that into Zotero.
+You can see my own digest, updated every Monday, [here](/my-paper-digest/). On the page you can tick papers, filter by any word, hide preprints or reviews, copy the ticked papers as references, or download them as a RIS file and drag that into Zotero.
 
 ## Get your own
 
