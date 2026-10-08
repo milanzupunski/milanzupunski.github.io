@@ -147,4 +147,4 @@ This is a keyword filter. It will not understand that a paper about GLR channels
 
 If you set it up for your own field and find a useful tweak, I would be glad to hear about it.
 
-*This tool was built with the help of [Claude](https://claude.ai) by [Anthropic](https://www.anthropic.com), which wrote the code and helped me draft this post.*
+*I should be clear about who did what. The idea and the testing were mine. The code and the first draft of this tool was built with the help of [Claude](https://claude.ai) by [Anthropic](https://www.anthropic.com), which wrote the code and helped me draft this post.*
