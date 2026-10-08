@@ -4,5 +4,5 @@ author :
   github : milanzupunski
   twitter : milanzupunski
   bluesky : milanzupunski.bsky.social
-markdown: milanzupunski
+markdown: kramdown
 permalink: /blog/:year/:month/:day/:title

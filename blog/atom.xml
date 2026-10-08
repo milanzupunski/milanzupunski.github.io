@@ -4,14 +4,14 @@ layout: feed
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-	<title>Milan Zupunski Blog</title>
+	<title>Milan Župunski: Blog</title>
 	<link href="http://milanzupunski.github.io/blog/atom.xml" rel="self"/>
 	<link href="http://milanzupunski.github.io/blog"/>
 	<updated>{{ site.time | date_to_xmlschema }}</updated>
-	<id>http://hankquinlan.github.io/blog</id>
+	<id>https://milanzupunski.github.io/blog</id>
 	<author>
 		<name>Milan Zupunski</name>
-		<email>milan.zupunski@hhu.de</email>
+		<email>mzupunski@yahoo.com</email>
 	</author>
 
 	{% for post in site.posts %}
