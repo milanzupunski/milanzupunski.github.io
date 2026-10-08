@@ -28,7 +28,7 @@ Once a week the script asks three sources for everything new:
 
 It then keeps only plant papers, scores each one against your keywords, merges preprint and journal versions of the same paper, skips anything it already showed you in an earlier week, and writes an HTML page sorted into topic sections.
 
-On my first 30-day test run, Europe PMC alone returned 11,602 records. After filtering and scoring, 791 were left, which works out to roughly 185 a week. The top of my calcium and ROS section was exactly the kind of thing I had been missing.
+On my first 30-day test run, the three sources returned about 18,000 unique records (11,602 from Europe PMC alone). After filtering and scoring, 791 were left, which works out to roughly 185 a week. The top of my calcium and ROS section was exactly the kind of thing I had been missing.
 
 ![The calcium and ROS section of my first digest](/docs/assets/plant-paper-digest-screenshot.png)
 
@@ -50,7 +50,7 @@ On the page you can tick papers, filter by any word, hide preprints or reviews, 
    python digest.py --days 30
    ```
 
-   On Windows you can use `run_digest.bat --days 30` instead, which also opens the result in your browser. The digest appears in `digests/latest.html`. A month of data takes a few minutes.
+   On Windows you can use `run_digest.bat --days 30` instead, which also opens the result in your browser. The digest appears in `digests/latest.html`. A month of data can take up to half an hour, mostly because bioRxiv is fetched one day at a time. A weekly run is much quicker.
 
 4. **Schedule it weekly.**
    - On **Windows**, double-click `setup_weekly_task.bat`. It creates a task that runs every Monday at 08:30, or at your next login if the computer was off.
@@ -59,6 +59,8 @@ On the page you can tick papers, filter by any word, hide preprints or reviews, 
      ```
      30 8 * * 1  cd /path/to/paper-digest && python3 digest.py >> run_log.txt 2>&1
      ```
+
+     On a Mac, cron is not allowed into your Documents folder by default. Either keep the folder somewhere else (for example `~/paper-digest`) or give `cron` Full Disk Access in System Settings, under Privacy & Security.
 
 That is all the maintenance it needs. If the computer is off for a few weeks, the next run catches up on up to 60 days.
 
@@ -98,7 +100,7 @@ Some rules for writing terms:
 | `root hair` | "root hair" and "root-hair" |
 | `stoma*` | stoma, stomata, stomatal |
 | `ROS` | only uppercase ROS (all-caps terms are case-sensitive) |
-| `calcium \| 2` | weight 2 (the default is 1) |
+| <code>calcium &#124; 2</code> | weight 2 (the default is 1) |
 | `re:PIN\d+` | a regular expression, here PIN1, PIN2 and so on |
 
 A term found in the title counts double. Give broad words like "growth" or "development" a low weight (0.5) and the specific ones you really care about a high weight (2 to 3). In my file, terms like GCaMP, RootChip and extracellular ATP carry the most weight.
@@ -134,7 +136,9 @@ These are the settings I found myself adjusting:
   The `=` means exact name, so `=Plant Pathology` does not also penalize *Molecular Plant Pathology*.
 - **A paper you expected is missing.** Run `python digest.py --ignore-seen --days 30`. Look at the "matched:" line under similar papers to see which terms fire, then add the term that is missing.
 - **Reviews crowding the top.** Reviews mention many keywords, so they score high. Use the "hide reviews" checkbox on the page.
+- **Old papers showing up.** Europe PMC sometimes indexes old papers in bulk. `max_age_days` (default 365) drops anything published longer ago than that.
 - **Only new preprints, or revisions too.** Change `biorxiv_new_only` in the settings block.
+- **Windows opens the page in Acrobat or Word.** That means .html files are set to open with that program. Right-click the file, choose *Open with*, then *Choose another app*, pick your browser and click *Always*.
 - **A journal always returns zero.** The run report at the bottom of each digest lists journals with no papers. If one stays at zero for a few weeks, its ISSN is probably wrong.
 
 ## Limits
