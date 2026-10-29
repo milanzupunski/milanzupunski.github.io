@@ -25,6 +25,50 @@
 
         <!-- Link to main stylesheet -->
         <link rel="stylesheet" type="text/css" href="/css/main.css">
+
+        {% if page.url == "/" or page.url == "/index.html" %}
+        <!-- Structured data for search engines (Google knowledge panel) -->
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Person",
+          "name": "Milan Župunski",
+          "alternateName": ["Milan Zupunski", "Милан Жупунски"],
+          "honorificPrefix": "Dr.",
+          "jobTitle": "Senior Research Associate",
+          "description": "Plant cell biologist working on live-cell imaging of signal perception in Arabidopsis roots using calcium and small-molecule biosensors.",
+          "url": "https://milanzupunski.github.io/",
+          "image": "https://milanzupunski.github.io/docs/assets/pic.jpg",
+          "affiliation": {
+            "@type": "CollegeOrUniversity",
+            "name": "University of Novi Sad",
+            "url": "https://www.uns.ac.rs"
+          },
+          "alumniOf": {
+            "@type": "CollegeOrUniversity",
+            "name": "University of Novi Sad"
+          },
+          "knowsAbout": [
+            "Plant cell signaling",
+            "Calcium signaling",
+            "Plant stress physiology",
+            "Live-cell imaging",
+            "Genetically encoded biosensors",
+            "Microfluidic root chips"
+          ],
+          "sameAs": [
+            "https://www.wikidata.org/wiki/Q59195816",
+            "https://orcid.org/0000-0002-8576-1292",
+            "https://scholar.google.com/citations?user=oPjYyFwAAAAJ",
+            "https://www.linkedin.com/in/milan-zupunski-phd/",
+            "https://www.researchgate.net/profile/Milan_Zupunski2",
+            "https://www.scopus.com/authid/detail.uri?authorId=55941267800",
+            "https://x.com/milanzupunski",
+            "https://bsky.app/profile/milanzupunski.bsky.social"
+          ]
+        }
+        </script>
+        {% endif %}
     </head>
     <body>
         <nav>
